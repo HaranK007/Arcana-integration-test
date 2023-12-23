@@ -64,7 +64,7 @@ function send() {
 let provider;
 let solanaP;
 const auth = new AuthProvider(
-  "xar_dev_e69388ef7f3794cc25803164fe307e90720f6695",
+  "xar_test_f4210049844670b77216d131b0d9d803342f0325",
 );
 
 provider = auth.provider;
