@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Auth example</title>
+
+
+
+  </head>
+
+  <body>
+    <div class="x-container">
+      <main>
+        <div class="headder operations">
+          <button class="btn" onclick="connect()">Connect</button>
+          <button class="btn" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="text">
+          Send sol to multiple wallets.. <br><br>
+          1. Add XLSX <br>
+          2. Send Sol
+        </div>
+
+        <div class="box">
+          <div class="main">
+            <input class="btn" type="file" id="fileInput" accept=".xlsx, .xls" />
+            <button class="btn" onclick="readExcel()">Read Excel</button>
+            <button class="btn" onclick="send()">Send</button>
+          </div>
+        </div>
+
+        <div class="footer">
+          <span class="sub-heading">Transaction: </span>
+          <pre class="sub-value" id="result">None</pre>
+          <br />
+        </div>
+       
+      </main>
+    </div>
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+      defer
+      async
+    ></script>
+    <script
+      src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"
+      defer
+      async
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/ethereumjs/browser-builds/dist/ethereumjs-tx/ethereumjs-tx-1.3.3.min.js"
+      defer
+      async
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="./bs58.bundle.js" defer async></script>
+    <script src="./auth.umd.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
